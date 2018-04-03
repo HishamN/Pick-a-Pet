@@ -9,7 +9,7 @@
 
         function fetchSearchResults(city) {
           var queryURL = "https://api.eventful.com/json/events/search?app_key=XRnv6H2q8DBfgngW&location=" + city + "&keywords=pets";
-          // var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + cars + "&api_key=C93K78HQ2rcQ97dNx87OnVuAYjvvpJtb&limit=10&offset=0&rating=PG&lang=en";
+          
 
           //Creating an Ajax call for the button being click
           $.ajax({
@@ -21,14 +21,17 @@
             var resultsDiv = $('#resultDiv');
             resultsDiv.empty();
 
+            //Create a loop for the API array and variables 
+            //to hold the api data
             for (var i = 0; results.event.length; i++) {
-              var url = results.event[i].url || '';
-              var city_name = results.event[i].city_name || '';
-              var region_name = results.event[i].region_name || '';
+              var url = results.event[i].url || 'No description found.';
+              var city_name = results.event[i].city_name || 'No description found';
+              var region_name = results.event[i].region_name || 'No description found';
               var description = results.event[i].description || 'No description found.';
-              var title = results.event[i].title || '';
-              var start_date = results.event[i].start_date || '';
+              var title = results.event[i].title || 'No description found.';
+              var start_date = results.event[i].start_date || 'No description found.';
 
+              // resultDiv.append will append the data on the html
               resultsDiv.append('<div><hr>' + 'URL: ' + url + '<br>' + 'City: ' + city_name + '<br>' + 'State: ' + region_name + '<br> ' + 'Description: ' + description + '<br>' +
                 'Title: ' + title + '<br>' + 'Start Date: ' + start_date + '</div>');
             }
