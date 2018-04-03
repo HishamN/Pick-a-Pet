@@ -1,131 +1,103 @@
-/* Custom Stylesheet */
-/**
- * Use this file to override Materialize files so you can update
- * the core Materialize files in the future
- *
- * Made By MaterializeCSS.com
- */
- @font-face {
-  font-family: curlz;
-  src: url(font/curlz.ttf);
+body {
+  position: relative;
 }
-nav ul a,
-nav .brand-logo {
+.logo {
+  width: 40px;
+  padding-top: 10px;
+  margin-left: 10px;
+}
+nav {
   background-color: peachpuff;
-  width: 100%;
-  font-family: curlz;
-  position: center;
-}
-.brand-logo{
-  width: 100%;
-}
-p {
-  line-height: 2rem;
-}
-
-h5{
-  color:  black;
-}
-/* .sidenav-trigger {
-  color: rgb(212, 0, 255); */
+  padding:0 30px;
 
 }
 
-.parallax-container {
-  min-height: 380px;
-  line-height: 0;
-  height: auto;
-  background-image: auto;
-  color: rgba(26, 2, 2, 0.9);
-  width: 100%;
-}
-.btn-large{
-  align-self: right;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  }
-  .btn-large {
-    border:1px solid green;
-    /* height:200px ;
-    width: 200px; */
-    border-radius: 4px;
-    box-shadow: 5px 5px 5px rgba(0,0,0,0);
-    transition: box-shadow 1s;
-  } 
+#pet-logo  {
+  font-weight: 800;
+  font-size: 30px;
   
+}
+.menu-icon  {
+  width:25px;
+  padding-top: 15px;
 
 }
-  .parallax-container .section {
-    width: 100%;
-    box-shadow: black;
-    box-shadow: 100px;
-    border: 10px;
-    border-color: black;
-  }
-  .footer-copyright{
-    text-align: center;
-    color: black
-  }
-  .page-footer{
-    background-color: peachpuff;
-    color: black;
-  }
-  .logo-container{
+
+.btn {
+  background-color: peachpuff;
+  border-radius: 5px;
+  padding-top: 2px;
+  color:black;
+  border: 1px solid black;
+}
+.btn:hover {
+  background-color: orange
+}
+.btn-dropdown {
+  height: 47px;
+}
+.btn-dropdown img{
+  width:32px;
+
+}
+.homeimage {
+  border-bottom: 1px solid #616161 ;
+  box-shadow: 0px 5px 13px -4px rgba(97,97,97,1);
+}
+.three-section {
+  margin-top: 50px;
+}
+.heart, .paw , .house p{
+  font-size: 20px;
+}
+.about-us p {
+  font-size: 20px;
   text-align: center;
+  
+}
+.about-us h3 {
+  color: #F9DBBD;
+  font-weight: 600;
+  text-shadow: -2px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.page-footer ul li {
+  display: inline;
+  margin-left: 20px;
+  color: #000;
+  font-size: 15px;
+}
+.page-footer a {
+   color: inherit;
+}
+.page-footer{
+  background-color: peachpuff;
   color: black;
-  }
-  .brand-logo{
-    text-align: center;
-    text: black;
-    }
-  .btn-large,.btn:hover{
- padding-top: 1px;
- padding-bottom: -2px;
- background: peachpuff;
- color: black;
- border-color: black;
- border-radius: 25px;
- background-color: peachpuff;
-float:right;
-
+  width: 100%;
+  
+}
+.footer-copyright {
+  font-size: 15px;
+}
+/* Form  */
+h2 {
+  color: #F9DBBD;
+  font-weight: 600;
+  text-shadow: -2px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  padding-top: 30px;
+}
+.submit-btn {
+  border: 2px solid #F9DBBD;
+  background: none;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+.dropdown-trigger btn{
+  background: orange;
+  position: fixed;
+ 
+}
+.dropdown-content{
+  background-color: orange;
 }
 
-  }
-  .button{
-    position: auto;
-    padding: 40px;
-    padding-top: 40px;
-    border-color: black;
-    border: 5px;
-    float:right;
-    background: peachpuff; 
-    
-   
-  }
-/* @media only screen and (max-width : 992px) {
-  .parallax-container .section {
-    position:relative;
-    top: 40%;
-  }
-  #index-banner .section {
-    top: 10%;
-  }
-}
 
-@media only screen and (max-width : 600px) {
-  #index-banner .section {
-    top: 0;
-  }
-}
-
-.icon-block {
-  padding: 0 15px;
-}
-.icon-block .material-icons {
-  font-size: inherit;
-}
-
-footer.page-footer {
-  margin: 0;
-} */
