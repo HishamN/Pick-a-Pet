@@ -5,34 +5,107 @@
  *
  * Made By MaterializeCSS.com
  */
-
+ @font-face {
+  font-family: curlz;
+  src: url(font/curlz.ttf);
+}
 nav ul a,
 nav .brand-logo {
-  color: rgb(133, 35, 212);
+  background-color: peachpuff;
+  width: 100%;
+  font-family: curlz;
+  position: center;
 }
-
+.brand-logo{
+  width: 100%;
+}
 p {
   line-height: 2rem;
 }
 
-.sidenav-trigger {
-  color: #71d32f;
+h5{
+  color:  black;
+}
+/* .sidenav-trigger {
+  color: rgb(212, 0, 255); */
+
 }
 
 .parallax-container {
   min-height: 380px;
   line-height: 0;
   height: auto;
+  background-image: auto;
   color: rgba(26, 2, 2, 0.9);
+  width: 100%;
+}
+.btn-large{
+  align-self: right;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  }
+  .btn-large {
+    border:1px solid green;
+    /* height:200px ;
+    width: 200px; */
+    border-radius: 4px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0);
+    transition: box-shadow 1s;
+  } 
+  
+
 }
   .parallax-container .section {
     width: 100%;
+    box-shadow: black;
+    box-shadow: 100px;
+    border: 10px;
+    border-color: black;
+  }
+  .footer-copyright{
+    text-align: center;
+    color: black
+  }
+  .page-footer{
+    background-color: peachpuff;
+    color: black;
+  }
+  .logo-container{
+  text-align: center;
+  color: black;
+  }
+  .brand-logo{
+    text-align: center;
+    text: black;
+    }
+  .btn-large,.btn:hover{
+ padding-top: 1px;
+ padding-bottom: -2px;
+ background: peachpuff;
+ color: black;
+ border-color: black;
+ border-radius: 25px;
+ background-color: peachpuff;
+float:right;
+
+}
+
+  }
+  .button{
+    position: auto;
+    padding: 40px;
+    padding-top: 40px;
+    border-color: black;
+    border: 5px;
+    float:right;
+    background: peachpuff; 
+    
    
   }
-
-@media only screen and (max-width : 992px) {
+/* @media only screen and (max-width : 992px) {
   .parallax-container .section {
-    position: absolute;
+    position:relative;
     top: 40%;
   }
   #index-banner .section {
@@ -55,4 +128,4 @@ p {
 
 footer.page-footer {
   margin: 0;
-}
+} */
