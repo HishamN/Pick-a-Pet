@@ -2,6 +2,7 @@ $(document).ready(function () {
 
     //Array of pets
     var petsArray = ["cat", "dog",];
+    
 
     // Fucntion for displaying the pets data
     function renderBtn() {
@@ -35,7 +36,7 @@ $(document).ready(function () {
 
 
     }
-    //Function handles events where a car button is clicked
+    //Function handles events where button is clicked
     $('#add-pets').on("click", function (event) {
         event.preventDefault();
         //Line grabs the input from the textbox and takes out spaces from the outside
@@ -43,7 +44,7 @@ $(document).ready(function () {
         if (gif == "") {
             alert("You must enter a value fool!");
         } else {
-            //Adds cars from the textbox to the array
+            //Adds pets from the textbox to the array
             petsArray.push(gif);
             // clear input box
             $("#cars-input").val("");
@@ -57,9 +58,9 @@ $(document).ready(function () {
         // remove prior gifs //
         $('#pets-view').empty();
         var pets = $(this).attr("data-name");
-        // var cars = $('#cars-input').val().trim();
+        // var cars = $('#pets-input').val().trim();
         var queryURL = " http://api.petfinder.com/pet.find?&key=af4f1bad7b7c2e0582a6fbfff43c9255&format=json&location=32819&animal=" + pets;
-        //Creating an AJax call for the specific car button being click
+        //Creating an AJax call for the specific pet button being click
         $.ajax({
             url: queryURL,
 
@@ -196,3 +197,37 @@ function breed() {
 
 //124-147 creates function to display change the name.
 //have to do that for breed...done gender age distance and size.
+
+//create a function
+
+var petBreeds =["Retrievers"
+    "German Shepherd",
+    "Retrievers",
+    "French Bulldogs",
+    "Bulldogs",
+    "Beagles",
+    "Poodles",
+    "Rottweilers",
+    "Yorkshire Terriers",
+    "Boxers",
+    "Huskies",
+    "Dachshunds",
+    "Great Danes",
+    "Doberman Pinschers
+    "Miniature Schnauzers
+    "Shih Tzu
+    "Cavalier King Charles Spaniels
+    "Boston Terriers
+    Pomeranians
+    Havanese
+    Shetland Sheepdogs
+    Bernese Mountain Dogs
+    Brittanys
+    Spaniels
+    Mastiffs"]
+
+    function breeds() {
+
+
+        
+    }
