@@ -1,71 +1,102 @@
-/* Custom Stylesheet */
-/**
- * Use this file to override Materialize files so you can update
- * the core Materialize files in the future
- *
- * Made By MaterializeCSS.com
- */
- /* This style is for the pet api2 styles */
 
- .pets {
+}
+.logo {
+  width: 40px;
+  padding-top: 10px;
+  margin-left: 10px;
+}
+nav {
+  background-color: peachpuff;
+  padding:0 30px;
 
-  font-weight: bold;
-
- }
-
- #resultDiv{
-   text-align: left;
- }
-
-
-
-nav ul a,
-nav .brand-logo {
-  color: rgb(133, 35, 212);
 }
 
-p {
-  line-height: 2rem;
+#pet-logo  {
+  font-weight: 800;
+  font-size: 30px;
+  
+}
+.menu-icon  {
+  width:25px;
+  padding-top: 15px;
+
 }
 
-.sidenav-trigger {
-  color: #71d32f;
+.btn {
+  background-color: peachpuff;
+  border-radius: 5px;
+  padding-top: 2px;
+  color:black;
+  border: 1px solid black;
+}
+.btn:hover {
+  background-color: orange
+}
+.btn-dropdown {
+  height: 47px;
+}
+.btn-dropdown img{
+  width:32px;
+
+}
+.homeimage {
+  border-bottom: 1px solid #616161 ;
+  box-shadow: 0px 5px 13px -4px rgba(97,97,97,1);
+}
+.three-section {
+  margin-top: 50px;
+}
+.heart, .paw , .house p{
+  font-size: 20px;
+}
+.about-us p {
+  font-size: 20px;
+  text-align: center;
+  
+}
+.about-us h3 {
+  color: #F9DBBD;
+  font-weight: 600;
+  text-shadow: -2px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.page-footer ul li {
+  display: inline;
+  margin-left: 20px;
+  color: #000;
+  font-size: 15px;
+}
+.page-footer a {
+   color: inherit;
+}
+.page-footer{
+  background-color: peachpuff;
+  color: black;
+  width: 100%;
+  
+}
+.footer-copyright {
+  font-size: 15px;
+}
+/* Form  */
+h2 {
+  color: #F9DBBD;
+  font-weight: 600;
+  text-shadow: -2px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  padding-top: 30px;
+}
+.submit-btn {
+  border: 2px solid #F9DBBD;
+  background: none;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+.dropdown-trigger btn{
+  background: orange;
+  position: fixed;
+ 
+}
+.dropdown-content{
+  background-color: orange;
 }
 
-.parallax-container {
-  min-height: 380px;
-  line-height: 0;
-  height: auto;
-  color: rgba(26, 2, 2, 0.9);
-}
-  .parallax-container .section {
-    width: 100%;
-   
-  }
 
-@media only screen and (max-width : 992px) {
-  .parallax-container .section {
-    position: absolute;
-    top: 40%;
-  }
-  #index-banner .section {
-    top: 10%;
-  }
-}
-
-@media only screen and (max-width : 600px) {
-  #index-banner .section {
-    top: 0;
-  }
-}
-
-.icon-block {
-  padding: 0 15px;
-}
-.icon-block .material-icons {
-  font-size: inherit;
-}
-
-footer.page-footer {
-  margin: 0;
-}
