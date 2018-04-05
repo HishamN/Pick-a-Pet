@@ -1,15 +1,17 @@
 
+body {
+  position: relative;
+}
+
 .logo {
-  width: 40px;
+  width: 70px;
   padding-top: 10px;
   margin-left: 10px;
 }
 nav {
   background-color: peachpuff;
   padding:0 30px;
-
 }
-
 #pet-logo  {
   font-weight: 800;
   font-size: 30px;
@@ -18,9 +20,7 @@ nav {
 .menu-icon  {
   width:25px;
   padding-top: 15px;
-
 }
-
 .btn {
   background-color: peachpuff;
   border-radius: 5px;
@@ -37,7 +37,6 @@ nav {
 }
 .btn-dropdown img{
   width:32px;
-
 }
 .homeimage {
   border-bottom: 1px solid #616161 ;
@@ -139,6 +138,17 @@ h2 {
   text-align: center;
 }
 
+#resultDiv{
+  text-align: left;
+}
+.card{
+  width: 100%;
+}
+#search-now{
+  background-color: orange;
+}
+
+
 
 /* styling my api page */
 
@@ -147,9 +157,11 @@ h2 {
   word-break: break-all;
 }
 
-@media screen and (max-width: 932px){
+
+@media screen (max-width: 932px){
 nav{
   width: 100%;
   height: 100px;
 }
-}
+
+
