@@ -144,22 +144,50 @@ $(document).ready(function () {
         });
 
     });
-    $(document).on("click", ".dog", function (event) {
-        event.preventDefault();
-        // remove prior gifs //
-        $('.pet-info').empty();
-       
-        // var cars = $('#pets-input').val().trim();
-        var queryURL = " http://api.petfinder.com/pet.find?&key=af4f1bad7b7c2e0582a6fbfff43c9255&format=json&location=32819&animal=dog";
-        //Creating an AJax call for the specific pet button being click
-        $.ajax({
-            url: queryURL,
+//starting//
+            $(document).on("click", ".dog", function (event) {
+                event.preventDefault();
+                // remove prior gifs //
+                $('.pet-info').empty();
+               
+                // var cars = $('#pets-input').val().trim();
+                var queryURL = " http://api.petfinder.com/pet.find?&key=af4f1bad7b7c2e0582a6fbfff43c9255&format=json&location=32819&animal=dog";
+                //Creating an AJax call for the specific pet button being click
+                $.ajax({
+                    url: queryURL,
+        
+                    method: "GET"
+                }).then(function (fetch) {
+                    var results = fetch;
+                    console.log(results);
+                    var innerResult = results.petfinder.pets.pet;
+                    // console.log(results)
+                    
+                    for (let i = 0; i < innerResult.length; i++) {
+                        const element = innerResult[i];
+                        var ourBreeds = [];
+                        const breeds = element.breeds.breed;
+                        for (let x = 0; x < breeds.length; x++) {
+                            const breed = breeds[x].$t;
+                            ourBreeds.push(breed)
+                        }
 
-            method: "GET"
-        }).then(function (fetch) {
-            var results = fetch;
-            console.log(results);
-            var innerResult = results.petfinder.pets.pet;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    }
+
             // console.log(results)
             
             for (let i = 0; i < innerResult.length; i++) {
@@ -171,31 +199,34 @@ $(document).ready(function () {
                     ourBreeds.push(breed)
                     
                 }
-                var petImage = ""
-                if (element.media.photos) { 
-                    petImage = $("<img>").attr("src", element.media.photos.photo[2].$t);
-                
-                    
-                }
-            
+                var col = $('<div>').addClass('col s12 m3');
+                var card = $('<div>').addClass('card');
+                var cardImage = $('<div>').addClass('card-image');
+                var cardContent = $('<div>').addClass('card-content');
 
-                
-                var q = $("<p>").text("Breed: " + ourBreeds);
-                 var p = $("<p>").text("Age: " + element.age.$t);
-                 var r = $("<p>").text("City: " + element.contact.city.$t);
-                 var s = $("<p>").text("Size: " + element.size.$t);
-                 var t = $("<p>").text("Sex: " + element.sex.$t);
+                var petImageSrc = element.media.photos ? element.media.photos.photo[2].$t : 'http://via.placeholder.com/350x150';
 
-                 $(".pet-info").append(petImage)
-                 $(".pet-info").append(q);
-                 $(".pet-info").append(p);
-                 $(".pet-info").append(r);
-                 $(".pet-info").append(s);
-                 $(".pet-info").append(t);
-                 $(".pet-info").append(" ")
+                var petImage = $("<img>").attr("src", petImageSrc);
+
+                var petStats = $('<p>').text(
+                    "Breed: " + ourBreeds + '\n' +
+                    "Age: " + element.age.$t + '\n' +
+                    "City: " + element.contact.city.$t + '\n' +
+                    "Size: " + element.size.$t + '\n' +
+                    "Sex: " + element.sex.$t + '\n'
+                ).addClass('truncate');
+
+                cardImage.append(petImage);
+                cardContent.append(petStats);
+
+                card.append(cardImage, cardContent).appendTo(col);
+
+                 $(".pet-info").append(col);
                  
 
             }
+
+            
 
 
 
@@ -234,6 +265,7 @@ $(document).ready(function () {
         });
 
     });
+
     $(document).on("click", ".cat", function (event) {
         event.preventDefault();
         // remove prior gifs //
@@ -259,33 +291,50 @@ $(document).ready(function () {
                 for (let x = 0; x < breeds.length; x++) {
                     const breed = breeds[x].$t;
                     ourBreeds.push(breed)
-                    
                 }
-                var petImage = ""
-                if (element.media.photos) { 
-                    petImage = $("<img>").attr("src", element.media.photos.photo[2].$t);
-                
-                    
-                }
-            
+                /*
+                <div class="row">
+                    <div class="col s12 m3">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="http://via.placeholder.com/350x150">
+                            </div>
 
-                
-                var q = $("<p>").text("Breed: " + ourBreeds);
-                 var p = $("<p>").text("Age: " + element.age.$t);
-                 var r = $("<p>").text("City: " + element.contact.city.$t);
-                 var s = $("<p>").text("Size: " + element.size.$t);
-                 var t = $("<p>").text("Sex: " + element.sex.$t);
+                            <div class="card-content">
+                                <p>I am a very simple card. I am good at containing small bits of information.
+                                I am convenient because I require little markup to use effectively.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                 $(".pet-info").append(petImage)
-                 $(".pet-info").append(q);
-                 $(".pet-info").append(p);
-                 $(".pet-info").append(r);
-                 $(".pet-info").append(s);
-                 $(".pet-info").append(t);
-                 $(".pet-info").append(" ")
-                 
+                */
 
+                var col = $('<div>').addClass('col s12 m3');
+                var card = $('<div>').addClass('card');
+                var cardImage = $('<div>').addClass('card-image');
+                var cardContent = $('<div>').addClass('card-content');
+
+                var petImageSrc = element.media.photos ? element.media.photos.photo[2].$t : 'http://via.placeholder.com/350x150';
+
+                var petImage = $("<img>").attr("src", petImageSrc);
+
+                var petStats = $('<p>').text(
+                    "Breed: " + ourBreeds + '\n' +
+                    "Age: " + element.age.$t + '\n' +
+                    "City: " + element.contact.city.$t + '\n' +
+                    "Size: " + element.size.$t + '\n' +
+                    "Sex: " + element.sex.$t + '\n'
+                ).addClass('truncate');
+
+                cardImage.append(petImage);
+                cardContent.append(petStats);
+
+                card.append(cardImage, cardContent).appendTo(col);
+
+                 $(".pet-info").append(col);
             }
+
 
 
 
@@ -324,6 +373,7 @@ $(document).ready(function () {
         });
 
     });
+
     //Adding click listener to all elements with a class "car-btn"
     $(document).on("click", ".giphys", function () {
         var state = $(this).attr('data-state');
@@ -339,9 +389,6 @@ $(document).ready(function () {
     // Calling the renderButtons function to display the intial buttons
     renderBtn();
 
-}); //end of document ready
-
-
 
 
 
@@ -349,6 +396,7 @@ function breed() {
 
     //Deleting the pets prior to adding new pets    
     $("#buttons-view").empty();
+
 
     //Looping the array of pets
     for (var i = 0; i < breed.length; i++) {
@@ -370,11 +418,11 @@ function breed() {
         $("#buttons-view").append(a);
     }
 
+}
 
 
 
-
-};
+});//end of document ready
 
 
 //124-147 creates function to display change the name.
