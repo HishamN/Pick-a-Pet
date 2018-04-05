@@ -100,4 +100,12 @@ h2 {
   background-color: orange;
 }
 
+/* styling my api page */
+
+.card .card-content p {
+  white-space: pre;
+  word-break: break-all;
+}
+
+
 
