@@ -11,24 +11,43 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>     
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
-<body>
-    <nav>
-      <div class="nav-wrapper">
-        <a href="#" id="pet-logo" class="brand-logo left">Pick a Pet<img class="logo" src="images/logo.png"></a>
-        <ul class="right hide-on-small-only">
-          <li><a class="btn"><img src="images/dogoutline.png"width="30px" height="30px">Pick A DOG</a></li>
-          <li><a class="btn"><img src="images/catoutline.png"width="30px" height="30px">Pick A CAT</a></li>
-        </ul>
-        <a class="dropdown-trigger" data-target="dropdown1"><img class="hide-on-med-and-up right menu-icon" src="../images/menu-icon.png"></a></li>
-        <ul id="dropdown1" class="right dropdown-content right hide-on-med-and-up">
-            <li><a class="btn btn-dropdown"><img src="images/dogoutline.png"></a></li>
-            <li><a class="btn btn-dropdown"><img src="images/catoutline.png"></a></li>
-        </ul>
-      </div>
-  </nav>
 
+  <body>
+  <nav>
+  <div class="nav-wrapper">
+  <a href="#" id="pet-logo" class="brand-logo center">Pick a Pet<img class="logo" src="images/logo.png"></a>
+  <ul class="right hide-on-small-only">
+    <li><a href="dogsearch.html" class="btn hide-on-med-and-down" href="results.html"><img src="images/dogoutline.png"width="30px" height="30px">Pick A DOG</a></li>
+    <li><a href="catsearch.html" class="btn hide-on-med-and-down"><img src="images/catoutline.png"width="30px" height="30px">Pick A CAT</a></li>
+  </ul>
+  <a class="dropdown-trigger" data-target="dropdown1"><img class="hide-on-med-and-up left menu-icon" src="images/menu-icon.png"></a></li>
+  <ul id="dropdown1" class="right dropdown-content right hide-on-med-and-up">
+      <li><a class="btn btn-dropdown"><img src="images/dogoutline.png"></a></li>
+      <li><a class="btn btn-dropdown"><img src="images/catoutline.png"></a></li>
+  </ul>
+  </div>
+  </nav>
+      
+<div id="index-banner" >
+  <div class="top-image ">
+    <img class="responsive-img homeimage" src="images/pethomepage.jpg" alt="Unsplashed background img 1">
+  </div>
+</div>
 
   
+
+<div class="container">
+<div class="three-section">
+  <!--   Icon Section   -->
+  <div class="row">
+    <div class="col s12 m4 center heart">
+        <img src="images/heart.png"width="50px">
+        <h5>Why Adopt?</h5>
+        <p class="light">When you adopt a pet you help an animal in need 
+          of a loving home and reduce the sales of puppy mills. By adopting 
+          not only will you get a greatful loving companion your also saving
+          a life. Unconditional love is as close as your local shelter. </p>
+    </div>
   
  <!--  FILTERS -->
  <!-- <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Breed</a>
@@ -60,59 +79,89 @@
    <li><a href="#!"></a>Burmese</li>
  </ul> -->
 
- <a class='dropdown-trigger btn' href='#' data-target='dropdown2'>Gender</a>
- <ul id='dropdown2' class='dropdown-content'>
-   <li><a href="#!">Male</a></li>
-   <li><a href="#!">Female</a></li>
- </ul>
 
- <a class='dropdown-trigger btn' href='#' data-target='dropdown3'>Age</a>
- <ul id='dropdown3' class='dropdown-content'>
-   <li><a href="#!">Kitten</a></li>
-   <li><a href="#!">Young</a></li>
-   <li><a href="#!">Adult</a></li>
-   <li><a href="#!">Senior</a></li>
- </ul>
+  <div class="col s12 m4 center paw">
+      <img src="images/paw.png" width="45px">
+      <h5>How Pick a Pet can help you?</h5>
+      <p class="light">By utilizing Pick a Pet you help your community and 
+        animals in need. You can choose a pet that is compatible to your 
+        family and its needs. All animals that are submitted to shelters 
+        have been evaluated and vaccinated to ensure the best possible 
+        chance for there new home.
+  </div>
 
 
-    <!-- PAGINATION -->
-    <ul class ="pagination">
-        <li class="waves-effect"><a href= "#"><i class= "material-icons"chevron-left> < </i></a></li>
-        <li class="hover-effect"><a href="#">1</a></li>
-        <li class="hover-effect"><a href="#">2</a></li>
-        <li class="hover-effect"><a href="#">3</a></li>
-        <li class="waves-effect"><a href="#">4</a></li>
-        <li class="waves-effect"><a href="#">5</a></li>
-        <li class="waves-effect"><a href="#">6</a></li>
-        <li class="waves-effect"><a href= "#"><i class= "material-icons"chevron-rightt> > </i></a></li>
-      </ul>
-    
-
-
-  <div class="page-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col s12">
-          <ul class="center">
-            <li><a href="index.html">Homepage</a></li> 
-            <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="index.html/aboutUs">About Us</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    
-    <div class="footer-copyright">
-      <div class="container center">
-       <p>&copy; Copyright 2018 - Pick a Pet</p>
+    <div class="col s12 m4 center house">
+        <img src="images/doghouse.png" width="45px">
+        <h5 class="center">Adoption Facts</h5>
+        <p class="light">Approximately 5-9 million animals are euthanized each year (60% being
+            dogs and 70% being cats). The number of euthanized animals could be reduced 
+            dramaticly if more people adopted pets instead of buying them. Also adopting a
+          cat or dog cost less than buying one from a pet store. </p>
       </div>
     </div>
   </div>
+</div>
 
-  <!--Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
 
-  </body>
+  <div class="parallax-container valign-wrapper">
+    <div class="parallax black-dog">
+      <img class="responsive-img"src="images/adopt.jpg" alt="Unsplashed background img 2">
+    </div>
+  </div>
+
+  <div class="container about-us" id="aboutus">
+      <div class="row">
+        <div class="col s12 center">
+          <h3>About Us</h3>
+          <p class="left-align light">Pick a Pet is a free and easy site to find the next
+             member of your family. Our mission is to help you along the way and make it 
+             as convenient as possible to find your furry companion. We list dogs and 
+             cats that are available locally in your area and are ready to adopt. Our goal is to
+             educate people about the horrible truth behind puppy mills and find homeless pets
+              a forever home. Because every animal deserves to be loved. 
+            </p>
+        </div>
+    </div>
+    
+  </div>
+
+  <div class="parallax-container valign-wrapper">
+    <div class="parallax">
+      <img src="background3.jpg" alt="Unsplashed background img 3">
+    </div>
+  </div>
+
+<div class="page-footer">
+<div class="container">
+<div class="row">
+<div class="col s12">
+  <ul class="center"> 
+    <li><a href="index.html">Homepage</a></li> 
+    <li><a href="index.html">About Us</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+    <li><a href="events.html">Events</a></li>
+    <li class=“nav-item”>
+        <a class=“nav-link js-scroll-trigger” href=“#aboutus”>About Us</a>
+    <!-- <li></li><a href="index.html">About Us</a></li> -->
+  </ul>
+</div>
+</div>
+</div>
+
+<div class="footer-copyright">
+<div class="container center">
+<p>&copy; Copyright 2018 - Pick a Pet</p>
+</div>
+</div>
+</div>
+
+
+
+<!--  Scripts-->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="js/materialize.js"></script>
+<script src="js/init.js"></script>
+
+</body>
 </html>
