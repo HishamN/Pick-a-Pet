@@ -5,6 +5,19 @@
  *
  * Made By MaterializeCSS.com
  */
+ /* This style is for the pet api2 styles */
+
+ .pets {
+
+  font-weight: bold;
+
+ }
+
+ #resultDiv{
+   text-align: left;
+ }
+
+
 
 nav ul a,
 nav .brand-logo {

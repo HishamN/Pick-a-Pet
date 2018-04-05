@@ -32,8 +32,22 @@
               var start_date = results.event[i].start_date || 'No description found.';
 
               // resultDiv.append will append the data on the html
-              resultsDiv.append('<div><hr>' + 'URL: ' + url + '<br>' + 'City: ' + city_name + '<br>' + 'State: ' + region_name + '<br> ' + 'Description: ' + description + '<br>' +
-                'Title: ' + title + '<br>' + 'Start Date: ' + start_date + '</div>');
+              resultsDiv.append(
+                '<div><hr>' +
+                   '<strong> Title:</strong> ' + title +
+                   '<br>' +
+                   ' <strong> Start Date:</strong> ' + start_date +
+                   '<br>' +
+                   ' <strong> City: </strong> ' + city_name +
+                   '<br> ' +
+                   '<strong> State: </strong> ' + region_name +
+                   '<br>' +
+                   '<strong>  URL: </strong> ' + url +
+                   '<br>' +
+                   '<strong> Description: </strong> ' + description +
+                '</div> ')
+
+  
             }
           });
         }
