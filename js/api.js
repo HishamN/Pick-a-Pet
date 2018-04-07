@@ -61,10 +61,11 @@ $(document).ready(function () {
         var pets = $("#pets-input").val().trim();
         console.log(pets);
         // var cars = $('#pets-input').val().trim();
-        var queryURL = " http://api.petfinder.com/pet.find?&key=af4f1bad7b7c2e0582a6fbfff43c9255&format=json&location=32819&animal=" + pets;
+        var cors= "https://cors-anywhere.herokuapp.com/"
+        var queryURL = "http://api.petfinder.com/pet.find?&key=af4f1bad7b7c2e0582a6fbfff43c9255&format=json&location=32819&animal=" + pets;
         //Creating an AJax call for the specific pet button being click
         $.ajax({
-            url: queryURL,
+            url: cors+queryURL,
 
             method: "GET"
         }).then(function (fetch) {
@@ -151,10 +152,11 @@ $(document).ready(function () {
                 $('.pet-info').empty();
                
                 // var cars = $('#pets-input').val().trim();
-                var queryURL = " http://api.petfinder.com/pet.find?&key=af4f1bad7b7c2e0582a6fbfff43c9255&format=json&location=32819&animal=dog";
+                var cors = 'https://cors-anywhere.herokuapp.com/';
+                var queryURL = "http://api.petfinder.com/pet.find?&key=af4f1bad7b7c2e0582a6fbfff43c9255&format=json&location=32819&animal=dog";
                 //Creating an AJax call for the specific pet button being click
                 $.ajax({
-                    url: queryURL,
+                    url: cors+queryURL,
         
                     method: "GET"
                 }).then(function (fetch) {
@@ -226,10 +228,6 @@ $(document).ready(function () {
 
             }
 
-            
-
-
-
             console.log(innerResult);
             //Displaying the rating
 
@@ -272,10 +270,11 @@ $(document).ready(function () {
         $('.pet-info').empty();
        
         // var cars = $('#pets-input').val().trim();
-        var queryURL = " http://api.petfinder.com/pet.find?&key=af4f1bad7b7c2e0582a6fbfff43c9255&format=json&location=32819&animal=cat";
+        var cors= "https://cors-anywhere.herokuapp.com/"
+        var queryURL = "http://api.petfinder.com/pet.find?&key=af4f1bad7b7c2e0582a6fbfff43c9255&format=json&location=32819&animal=cat";
         //Creating an AJax call for the specific pet button being click
         $.ajax({
-            url: queryURL,
+            url: cors+queryURL,
 
             method: "GET"
         }).then(function (fetch) {
